@@ -9,9 +9,9 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
     public class StudentController : Controller
     {
         // GET: Student
-        public ActionResult Index()
+        public string Index()
         {
-            return View();
+            return "This is Index action method of StudentController";
         }
     }
 }

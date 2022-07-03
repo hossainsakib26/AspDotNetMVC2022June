@@ -18,21 +18,23 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
         //get students
         public ActionResult Index()
         {
-            return View(DBClass.studentList);
+            return View(DBClass.studentList.OrderBy(s => s.Id).ToList());
         }
 
-        public ActionResult Edit(int id, string name)
+        // GET : Specific student
+        public ActionResult Edit(int id)
         {
-            return View();
+            var std = DBClass.studentList.Where(c => c.Id == id).FirstOrDefault();
+
+            return View(std);
         }
 
         [HttpPost]
         public ActionResult Edit(Student std)
         {
-            var id = std.Id;
-            var name = std.Name;
-            var age = std.Age;
-            var standardName = std.Standard.Name;
+            var student = DBClass.studentList.Where(c => c.Id == std.Id).FirstOrDefault();
+            student = std;
+
 
             return RedirectToAction("Index");
         }

@@ -21,5 +21,9 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
             return View(DBClass.studentList);
         }
 
+        public ActionResult Edit(int id, string name)
+        {
+            return View();
+        }
     }
 }

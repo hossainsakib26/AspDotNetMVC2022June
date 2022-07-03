@@ -25,5 +25,16 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Edit(Student std)
+        {
+            var id = std.Id;
+            var name = std.Name;
+            var age = std.Age;
+            var standardName = std.Standard.Name;
+
+            return RedirectToAction("Index");
+        }
     }
 }

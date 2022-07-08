@@ -12,7 +12,7 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
     {
         public StudentController()
         {
-            
+
         }
         
         //get students
@@ -21,6 +21,7 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
             return View(DBClass.studentList.OrderBy(s => s.Id).ToList());
         }
 
+        
         // GET : Specific student
         public ActionResult Edit(int id)
         {

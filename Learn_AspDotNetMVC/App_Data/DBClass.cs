@@ -9,12 +9,12 @@ namespace Learn_AspDotNetMVC.App_Data
 
         public static IList<Student> studentList = new List<Student>
         {
-            new Student() {Id = 1, Name = "Potato MIa", Age = "23"},
-            new Student() {Id = 2, Name = "Alu MIa", Age = "23"},
-            new Student() {Id = 3, Name = "Khazu MIa", Age = "23"},
-            new Student() {Id = 4, Name = "Kobra MIa", Age = "23"},
-            new Student() {Id = 5, Name = "Huzu MIa", Age = "23"},
-            new Student() {Id = 6, Name = "Abal MIa", Age = "23"},
+            new Student() {Id = 1, Name = "Potato Mia", Age = "23", GenderID = 1,},
+            new Student() {Id = 2, Name = "Alu Mia", Age = "23", GenderID = 1,},
+            new Student() {Id = 3, Name = "Maiasa Lamia", Age = "23", GenderID = 2,},
+            new Student() {Id = 4, Name = "Kobra Zamia", Age = "23", GenderID = 2,},
+            new Student() {Id = 5, Name = "Huzu Mia", Age = "23", GenderID = 1,},
+            new Student() {Id = 6, Name = "Abal Mia", Age = "23", GenderID = 1,},
         };
 
     }

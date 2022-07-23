@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using Learn_AspDotNetMVC.Models.Enum;
 
 namespace Learn_AspDotNetMVC.Models.TutorialsTeacher
 {
@@ -12,7 +9,9 @@ namespace Learn_AspDotNetMVC.Models.TutorialsTeacher
         [Display(Name = "Student Name")]
         public string Name { get; set; }
         public string Age { get; set; }
+        public int GenderID { get; set; }
 
         public Standard Standard { get; set; }
+        public Gender Gender { get; set; }
     }
 }

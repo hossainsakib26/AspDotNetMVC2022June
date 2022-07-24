@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Learn_AspDotNetMVC.Models.TutorialsTeacher.Student>
+﻿@using Learn_AspDotNetMVC.Models.Enum
+@model IEnumerable<Learn_AspDotNetMVC.Models.TutorialsTeacher.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +22,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Gender)
         </th>
-        <th></th>
+        <th>Controls</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -33,9 +34,7 @@
                 @Html.DisplayFor(modelItem => item.Age)
             </td>
             <td>
-
-                @Html.DisplayFor(modelItem => item.Gender)
-
+                @Html.DisplayFor(modelItem => Enum.GetName(typeof(Gender), item.GenderID))
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

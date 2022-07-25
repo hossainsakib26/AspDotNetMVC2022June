@@ -6,8 +6,9 @@ namespace Learn_AspDotNetMVC.Models.TutorialsTeacher
     public class Student
     {
         public int Id { get; set; }
-        [Display(Name = "Student Name")]
+        [Display(Name = "Student Name")] [Required(ErrorMessage = "Please, enter a name!")]
         public string Name { get; set; }
+        [Required] [Range(05, 30)]
         public string Age { get; set; }
         public int GenderID { get; set; }
 

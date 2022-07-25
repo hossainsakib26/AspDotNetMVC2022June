@@ -1,5 +1,4 @@
-﻿@using Learn_AspDotNetMVC.Models.Enum
-@model IEnumerable<Learn_AspDotNetMVC.Models.TutorialsTeacher.Student>
+﻿@model IEnumerable<Learn_AspDotNetMVC.Models.TutorialsTeacher.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -20,28 +19,28 @@
             @Html.DisplayNameFor(model => model.Age)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gender)
+            @Html.DisplayNameFor(model => model.GenderID)
         </th>
-        <th>Controls</th>
+        <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Enum.GetName(typeof(Gender), item.GenderID))
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GenderID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
 
 </table>

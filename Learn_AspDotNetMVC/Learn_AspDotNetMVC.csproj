@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -164,7 +165,7 @@
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\_myLayoutPage.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Shared\Common_Component\_MenuBar.cshtml" />
+    <Content Include="Views\Shared\Common\_MenuBar.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

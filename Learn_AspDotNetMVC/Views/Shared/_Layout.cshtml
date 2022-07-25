@@ -8,7 +8,13 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    
+
+    @*@Html.Partial("~/Views/Shared/Common/_MenuBar.cshtml")*@
+
+    @{
+        Html.RenderPartial("~/Views/Shared/Common/_MenuBar.cshtml");
+    }
+
     <div class="container body-content">
         @RenderBody()
         <hr />

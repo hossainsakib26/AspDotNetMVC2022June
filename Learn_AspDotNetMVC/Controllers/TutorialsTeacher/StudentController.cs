@@ -19,7 +19,10 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
         public ActionResult Index()
         {
             ViewBag.TotalStudents = DBClass.studentList.Count();
+            ViewData["Students"] = DBClass.studentList;
+
             return View(DBClass.studentList.OrderBy(s => s.Id).ToList());
+            
         }
 
         

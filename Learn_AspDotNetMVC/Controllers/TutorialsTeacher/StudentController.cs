@@ -21,6 +21,8 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
             ViewBag.TotalStudents = DBClass.studentList.Count();
             ViewData["Students"] = DBClass.studentList;
 
+            TempData["StdName"] = "BocaChoda";
+
             return View(DBClass.studentList.OrderBy(s => s.Id).ToList());
             
         }
@@ -31,6 +33,20 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
         {
             var std = DBClass.studentList.Where(c => c.Id == id).FirstOrDefault();
 
+
+            string tdName;
+            //if (TempData.ContainsKey("StdName"))
+            //{
+            //    tdName = TempData["Name"].ToString();
+            //}
+
+            if (TempData.ContainsKey("StdName"))
+            
+                tdName = TempData["StdName"] as string;
+            
+            TempData.Keep("StdName");
+
+
             return View(std);
         }
 
@@ -39,7 +55,6 @@ namespace Learn_AspDotNetMVC.Controllers.TutorialsTeacher
         {
             var student = DBClass.studentList.Where(c => c.Id == std.Id).FirstOrDefault();
             student = std;
-
 
             return RedirectToAction("Index");
         }
